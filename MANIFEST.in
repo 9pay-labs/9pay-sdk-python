@@ -1,0 +1,9 @@
+# Manifest file for Python package distribution
+include README.md
+include README.vi.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include requirements.txt
+recursive-include examples *.py
+recursive-include tests *.py
