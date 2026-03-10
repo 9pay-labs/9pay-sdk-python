@@ -41,4 +41,6 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release version --push
+          python -m build
+          ls -la dist/
           semantic-release -vv publish
