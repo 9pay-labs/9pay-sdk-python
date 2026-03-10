@@ -1,11 +1,24 @@
 [tool.semantic_release]
-branch = "main"
 tag_format = "v{version}"
 build_command = "python -m build"
-dist_glob_patterns = ["dist/*"]
-upload_to_vcs_release = true
+
+[tool.semantic_release.branches.main]
+match = "main"
+
+[tool.semantic_release.version_variables]
+# if version is in setup.py:
+# "setup.py:version" 
 
 [tool.semantic_release.publish]
-dist_glob_patterns = ["dist/*"]
 upload_to_vcs_release = true
+dist_glob_patterns = ["dist/*"]
+
+[tool.semantic_release.remote]
+type = "github"
+
+[tool.semantic_release.remote.token]
+env = "GH_TOKEN"
+
+[tool.semantic_release.pypi]
+token = { env = "PYPI_TOKEN" }
 
