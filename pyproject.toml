@@ -1,10 +1,13 @@
-[semantic_release]
-
+[tool.semantic_release]
 branch = "main"
-
 tag_format = "v{version}"
-version_source = "tag"
+
+version_variable = [
+  "setup.py:version"
+]
 
 build_command = "python -m build"
-upload_to_release = true
+
 upload_to_pypi = true
+upload_to_release = true
+
