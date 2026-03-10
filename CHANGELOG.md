@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.1.1 (2026-03-10)
+
+### Bug Fixes
+
+- Update yml
+  ([`c8059f9`](https://github.com/9pay-labs/9pay-sdk-python/commit/c8059f9ca9815c7e074bc2023200aaaf38e9abda))
+
+
 ## v0.1.0 (2026-03-10)
 
 ### Bug Fixes
