@@ -1,20 +1,14 @@
 from setuptools import setup, find_packages
-import subprocess
+from ninepay import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-def get_version():
-    return subprocess.check_output(
-        ["git", "describe", "--tags", "--abbrev=0"]
-    ).decode().strip().lstrip("v")
-
-    
 setup(
     name="ninepay-sdk",
-    version=get_version(),
+    version=__version__,
     author="9Pay Labs",
-    author_email="support@9pay.vn",
+    author_email="app@9pay.vn",
     description="Official Python SDK for 9PAY Payment Gateway",
     long_description=long_description,
     long_description_content_type="text/markdown",
