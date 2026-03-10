@@ -27,7 +27,7 @@ jobs:
 
       - name: install deps
         run: |
-          pip install "python-semantic-release>=9.0,<10" build
+          pip install "python-semantic-release>=9.0,<10" build requests
 
       - name: debug git
         run: |
