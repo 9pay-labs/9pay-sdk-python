@@ -36,5 +36,5 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
           SEMANTIC_RELEASE_LOG_LEVEL: DEBUG
         run: |
-          semantic-release publish
+          semantic-release publish -vv
 
