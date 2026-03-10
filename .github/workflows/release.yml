@@ -27,7 +27,7 @@ jobs:
 
       - name: install deps
         run: |
-          pip install "python-semantic-release==8.7.2" build twine
+          pip install "python-semantic-release>=9.0,<10" build
 
       - name: debug git
         run: |
