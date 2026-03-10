@@ -38,7 +38,7 @@ Official Python SDK for integrating 9PAY Payment Gateway.
    ```
 
 ### 📦 Features
-- ✅ **Dynamic Config**: Managed via `.env` files (PHP/Laravel style)
+- ✅ **Dynamic Config**: Managed via `.env` files
 - ✅ **Secure**: Signature generation and verification
 - ✅ **Complete**: Payment creation, inquiry, and webhook handlers
 - ✅ **Framework Friendly**: Ready for Django, Flask, FastAPI
@@ -126,11 +126,5 @@ python demo.py
 ```bash
 python -m unittest discover tests -v
 ```
-
-### 📞 Hỗ trợ
-- Email: support@9pay.vn
-- Website: https://9pay.vn
-
----
 
 Licensed under MIT.
