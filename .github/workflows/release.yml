@@ -40,5 +40,7 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release version --push
-          semantic-release publish
+          echo "=== version done, starting publish ==="
+          semantic-release publish --verbosity DEBUG   # ← thêm DEBUG
+          echo "=== publish done ==="
           git push --follow-tags
