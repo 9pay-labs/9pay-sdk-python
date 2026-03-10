@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.4 (2026-03-10)
+
+### Bug Fixes
+
+- Update release rc
+  ([`b4eb333`](https://github.com/9pay-labs/9pay-sdk-python/commit/b4eb3338547f2fd65055850141e5fb876d0b36a8))
+
+
 ## v1.0.3 (2026-03-10)
 
 ### Bug Fixes
