@@ -32,7 +32,9 @@ jobs:
         id: semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+          SEMANTIC_RELEASE_LOG_LEVEL: DEBUG
         run: |
           semantic-release publish
 
