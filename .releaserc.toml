@@ -3,10 +3,7 @@
 branch = "main"
 
 tag_format = "v{version}"
-
-version_variable = [
-    "setup.py:version"
-]
+version_source = "tag"
 
 build_command = "python -m build"
 upload_to_release = true
