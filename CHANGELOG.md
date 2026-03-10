@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## v1.0.1 (2026-03-10)
+## v0.1.0 (2026-03-10)
 
 ### Bug Fixes
 
@@ -28,6 +28,12 @@
 
 - Rename file
   ([`a035b4b`](https://github.com/9pay-labs/9pay-sdk-python/commit/a035b4b30308cb95bc068571d2f7769cac3ae608))
+
+- Trigger first clean release
+  ([`34d220c`](https://github.com/9pay-labs/9pay-sdk-python/commit/34d220c190763b53dc280f8cf8d00e94c1de7eae))
+
+- Trigger first clean release
+  ([`83edd89`](https://github.com/9pay-labs/9pay-sdk-python/commit/83edd89c1011fba9adad80bd7824091073c7aa0a))
 
 - Update
   ([`905c5b6`](https://github.com/9pay-labs/9pay-sdk-python/commit/905c5b64f2433d8e00ed105b7c2ae226db4b1f8f))
@@ -86,6 +92,9 @@
 - Update release rc
   ([`cb0f62a`](https://github.com/9pay-labs/9pay-sdk-python/commit/cb0f62a1e23fc7ead97070601ab294aaa75012b2))
 
+- Update release rc
+  ([`4c64bab`](https://github.com/9pay-labs/9pay-sdk-python/commit/4c64bab5f6efa2e26184b5b1c82b0adedd0ab7f9))
+
 - Update release yml
   ([`0f726e7`](https://github.com/9pay-labs/9pay-sdk-python/commit/0f726e7c2e11e2ba4c76e78ecd15cf8c1951f90a))
 
@@ -97,14 +106,6 @@
 
 - Update workflow
   ([`d9cf9bb`](https://github.com/9pay-labs/9pay-sdk-python/commit/d9cf9bbba1b61ea7a69f9979ee4bbe5438a115fd))
-
-
-## v1.0.0 (2026-03-10)
-
-### Bug Fixes
-
-- Update release rc
-  ([`4c64bab`](https://github.com/9pay-labs/9pay-sdk-python/commit/4c64bab5f6efa2e26184b5b1c82b0adedd0ab7f9))
 
 ### Features
 
