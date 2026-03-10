@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          fetch-tags: true
 
       - uses: actions/setup-python@v5
         with:
@@ -27,6 +28,11 @@ jobs:
       - name: install deps
         run: |
           pip install python-semantic-release build twine
+
+      - name: debug git
+        run: |
+          git log --oneline -5
+          git tag
 
       - name: semantic release
         id: semantic-release
