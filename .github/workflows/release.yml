@@ -40,7 +40,7 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release version --push
-          echo "=== version done, starting publish ==="
-          ls -la dist/
+          echo "PYPI_TOKEN is set: ${{ secrets.PYPI_API_TOKEN != '' }}"
+          pip install twine
+          twine upload dist/* --non-interactive    # ← test PyPI upload direct
           semantic-release -vv publish
-          echo "=== publish done ==="
