@@ -5,7 +5,7 @@ Official Python SDK for integrating 9PAY Payment Gateway.
 Supports creating payment requests, querying transactions, and verifying webhooks.
 """
 
-__version__ = "1.0.5"
+__version__ = "1.0.0"
 __author__ = "9Pay Labs"
 
 from ninepay.config import NinePayConfig
