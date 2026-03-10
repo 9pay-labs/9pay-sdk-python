@@ -33,7 +33,6 @@ jobs:
         run: |
           git log --oneline -5
           git tag
-          semantic-release --version
 
       - name: semantic release
         env:
@@ -42,3 +41,4 @@ jobs:
         run: |
           semantic-release version --push
           semantic-release publish
+          git push --follow-tags
