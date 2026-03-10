@@ -3,6 +3,11 @@
 
 ## v1.0.7 (2026-03-10)
 
+### Bug Fixes
+
+- Update release file
+  ([`ec1eaca`](https://github.com/9pay-labs/9pay-sdk-python/commit/ec1eaca42141f49469dda666efab78cad0d5c817))
+
 
 ## v1.0.6 (2026-03-10)
 
