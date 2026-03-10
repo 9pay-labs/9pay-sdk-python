@@ -32,13 +32,7 @@ jobs:
         id: semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release publish
 
-      - name: upload to PyPI
-        if: steps.semantic-release.outputs.released == 'true'
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: |
-          twine upload dist/*
