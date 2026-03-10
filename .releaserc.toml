@@ -1,0 +1,11 @@
+[semantic_release]
+
+branch = "main"
+
+tag_format = "v{version}"
+
+version_variable = [
+    "setup.py:version"
+]
+
+build_command = "python -m build"
