@@ -1,7 +1,6 @@
 [tool.semantic_release]
 tag_format = "v{version}"
 build_command = "python -m build"
-version_variables = ["VERSION:"]
 
 [tool.semantic_release.branches.main]
 match = "main"
