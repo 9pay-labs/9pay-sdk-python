@@ -10,3 +10,4 @@ version_variable = [
 
 build_command = "python -m build"
 upload_to_release = true
+upload_to_pypi = true
