@@ -1,7 +1,15 @@
 # CHANGELOG
 
 
+## v1.0.9 (2026-03-10)
+
+
 ## v1.0.8 (2026-03-10)
+
+### Bug Fixes
+
+- Fix syntax
+  ([`5a84ca1`](https://github.com/9pay-labs/9pay-sdk-python/commit/5a84ca1ec322cc235ee22f4a697b7e6d358dd4e5))
 
 
 ## v1.0.7 (2026-03-10)
