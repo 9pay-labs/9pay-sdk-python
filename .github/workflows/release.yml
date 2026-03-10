@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
 
@@ -27,7 +28,7 @@ jobs:
 
       - name: install deps
         run: |
-          pip install "python-semantic-release>=9.0,<10" build twine
+          pip install "python-semantic-release>=9.0,<10" build
 
       - name: debug git
         run: |
@@ -40,7 +41,4 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release version --push
-          echo "PYPI_TOKEN is set: ${{ secrets.PYPI_API_TOKEN != '' }}"
-          pip install twine
-          twine upload dist/* --non-interactive    # ← test PyPI upload direct
           semantic-release -vv publish
