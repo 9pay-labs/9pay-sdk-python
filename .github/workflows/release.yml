@@ -27,20 +27,19 @@ jobs:
 
       - name: install deps
         run: |
-          pip install python-semantic-release build twine
+          pip install "python-semantic-release==8.7.2" build twine
 
       - name: debug git
         run: |
           git log --oneline -5
           git tag
+          semantic-release --version
 
       - name: semantic release
         id: semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-          SEMANTIC_RELEASE_LOG_LEVEL: DEBUG
+          PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release publish
 

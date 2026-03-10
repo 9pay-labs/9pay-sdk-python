@@ -1,13 +1,11 @@
 [tool.semantic_release]
 branch = "main"
 tag_format = "v{version}"
-
-version_variable = [
-  "setup.py:version"
-]
-
 build_command = "python -m build"
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
 
-upload_to_pypi = true
-upload_to_release = true
+[tool.semantic_release.publish]
+dist_glob_patterns = ["dist/*"]
+upload_to_vcs_release = true
 
