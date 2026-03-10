@@ -35,7 +35,7 @@ jobs:
           git log --oneline -5
           git tag
 
-      - name: semantic release
+      - name: Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
@@ -43,4 +43,11 @@ jobs:
           semantic-release version --push
           python -m build
           ls -la dist/
-          semantic-release -vv publish
+
+      - name: Publish to PyPI
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          pip install twine
+          twine upload dist/*
