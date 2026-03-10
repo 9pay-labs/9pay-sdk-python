@@ -36,11 +36,9 @@ jobs:
           semantic-release --version
 
       - name: semantic release
-        id: semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
-          semantic-release version --print-tag
+          semantic-release version --push
           semantic-release publish
-
