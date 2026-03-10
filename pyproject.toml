@@ -1,7 +1,6 @@
 [tool.semantic_release]
 tag_format = "v{version}"
 build_command = "python -m build"
-version_variables = ["ninepay/__init__.py:__version__"]
 
 [tool.semantic_release.branches.main]
 match = "main"
@@ -17,3 +16,12 @@ token = { env = "GH_TOKEN" }
 [tool.semantic_release.pypi]
 token = { env = "PYPI_TOKEN" }
 
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+dependencies = ["requests>=2.28.0"]
