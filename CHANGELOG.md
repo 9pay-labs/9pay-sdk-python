@@ -1,7 +1,23 @@
 # CHANGELOG
 
 
+## v1.0.10 (2026-03-10)
+
+### Bug Fixes
+
+- Remove VERSION
+  ([`8382d49`](https://github.com/9pay-labs/9pay-sdk-python/commit/8382d49173f3b514d70f7eb948e9326ecec1cbe2))
+
+- Update manual build
+  ([`f0e32dc`](https://github.com/9pay-labs/9pay-sdk-python/commit/f0e32dc403919f8daa88a40ff4a2b205d3ab28bb))
+
+
 ## v1.0.9 (2026-03-10)
+
+### Bug Fixes
+
+- Update push pypi
+  ([`2dcefac`](https://github.com/9pay-labs/9pay-sdk-python/commit/2dcefac8ddb447140b19fe39c754cd720f84b163))
 
 
 ## v1.0.8 (2026-03-10)
