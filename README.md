@@ -1,5 +1,10 @@
 # 9PAY Payment Gateway Python SDK
 
+[![PyPI version](https://img.shields.io/pypi/v/ninepay-sdk)](https://pypi.org/project/ninepay-sdk/)
+[![Python versions](https://img.shields.io/pypi/pyversions/ninepay-sdk)](https://pypi.org/project/ninepay-sdk/)
+[![Downloads](https://img.shields.io/pypi/dm/ninepay-sdk)](https://pypi.org/project/ninepay-sdk/)
+[![License](https://img.shields.io/pypi/l/ninepay-sdk)](https://pypi.org/project/ninepay-sdk/)
+
 Official Python SDK for integrating 9PAY Payment Gateway.
 
 [English](#english) | [Tiếng Việt](#tiếng-việt)
@@ -121,15 +126,9 @@ Bạn có thể chạy script demo để kiểm tra nhanh:
 python demo.py
 ```
 
-### 🧪 Chạy Test
+### 🧪 Chạy Test 
 ```bash
 python -m unittest discover tests -v
 ```
-
-### 📞 Hỗ trợ
-- Email: support@9pay.vn
-- Website: https://9pay.vn
-
----
 
 Licensed under MIT.
