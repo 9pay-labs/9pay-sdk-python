@@ -31,6 +31,7 @@ Official Python SDK for integrating 9PAY Payment Gateway.
    NINEPAY_SECRET_KEY=your_secret_key
    NINEPAY_CHECKSUM_KEY=your_checksum_key
    NINEPAY_ENV=SANDBOX
+   NINEPAY_ENDPOINT=https://xxx-payment.9pay.mobi
    ```
 
 3. **Usage:**
@@ -43,9 +44,13 @@ Official Python SDK for integrating 9PAY Payment Gateway.
    ```
 
 ### 📦 Features
-- ✅ **Dynamic Config**: Managed via `.env` files
-- ✅ **Secure**: Signature generation and verification
-- ✅ **Complete**: Payment creation, inquiry, and webhook handlers
+- ✅ **Dynamic Config**: Managed via `.env` files (PHP/Laravel style)
+- ✅ **Secure**: Signature generation and verification (HMAC-SHA256)
+- ✅ **Comprehensive API**: 
+    - [x] Portal Payment (Redirect)
+    - [x] Transaction Inquiry
+    - [x] Refunds (Full/Partial)
+    - [x] Card Payment Flow (Payer Auth, Authorize, Capture, Reverse)
 - ✅ **Framework Friendly**: Ready for Django, Flask, FastAPI
 
 ### 🛠 Installation
@@ -64,7 +69,7 @@ request = CreatePaymentRequest(
     description='Order #12345',
     back_url='https://yoursite.com/cancel',
     return_url='https://yoursite.com/success'
-).with_method(PaymentMethod.ATM_CARD).with_lang(Language.EN)
+).with_method(PaymentMethod.CREDIT_CARD).with_lang(Language.EN)
 
 response = gateway.create_payment(request)
 if response.is_success():
@@ -99,26 +104,20 @@ if response.is_success():
 
 ### ✨ Tính năng chính
 - ✅ **Cấu hình tập trung**: Quản lý qua file `.env` (giống Laravel/PHP)
-- ✅ **Bảo mật**: Tự động tạo và xác thực chữ ký (checksum)
-- ✅ **Đầy đủ**: Hỗ trợ tạo thanh toán, truy vấn đơn hàng và Webhook
+- ✅ **Bảo mật**: Tự động tạo và xác thực chữ ký chuẩn HMAC-SHA256
+- ✅ **Đầy đủ API**:
+    - [x] Tạo thanh toán Portal (Redirect)
+    - [x] Truy vấn đơn hàng (Inquiry)
+    - [x] Hoàn tiền (Refund)
+    - [x] Luồng thẻ nâng cao (Payer Auth, Authorize, Capture, Reverse)
 - ✅ **Dễ tích hợp**: Tương thích tốt với Django, Flask, FastAPI
 
-### 💡 Ví dụ: Tạo thanh toán
+### 💡 Ví dụ: Truy vấn đơn hàng
 ```python
-from ninepay import CreatePaymentRequest, PaymentMethod, Language
-import time
-
-request = CreatePaymentRequest(
-    invoice_no=f'INV_{int(time.time())}',
-    amount='100000',
-    description='Thanh toán đơn hàng #123',
-    back_url='https://site.com/cancel',
-    return_url='https://site.com/success'
-).with_method(PaymentMethod.ATM_CARD).with_lang(Language.VI)
-
-response = gateway.create_payment(request)
+# Truy vấn đơn hàng theo transaction ID (mã 9Pay) hoặc Invoice No
+response = gateway.inquiry("454518005824417")
 if response.is_success():
-    print(f"URL Thanh toán: {response.get_data()['redirect_url']}")
+    print(f"Trạng thái đơn hàng: {response.get_data()['status']}")
 ```
 
 ### 🖥 Chạy Demo
