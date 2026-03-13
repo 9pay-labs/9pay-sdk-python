@@ -52,24 +52,18 @@ class Environment:
     SANDBOX = "SANDBOX"
     PRODUCTION = "PRODUCTION"
     
-    # API Endpoints
-    ENDPOINTS = {
-        SANDBOX: "https://sandbox.9pay.vn/payments",
-        PRODUCTION: "https://api.9pay.vn/payments"
-    }
-    
-    # Query Endpoints
-    QUERY_ENDPOINTS = {
-        SANDBOX: "https://sandbox.9pay.vn/payments/inquiry",
-        PRODUCTION: "https://api.9pay.vn/payments/inquiry"
+    # Base Endpoints
+    # We can override these via NINEPAY_ENDPOINT environment variable
+    BASE_URLS = {
+        SANDBOX: "",
+        PRODUCTION: ""
     }
     
     @classmethod
     def get_endpoint(cls, env: str) -> str:
-        """Get payment endpoint for environment"""
-        return cls.ENDPOINTS.get(env, cls.ENDPOINTS[cls.SANDBOX])
-    
-    @classmethod
-    def get_query_endpoint(cls, env: str) -> str:
-        """Get query endpoint for environment"""
-        return cls.QUERY_ENDPOINTS.get(env, cls.QUERY_ENDPOINTS[cls.SANDBOX])
+        """Get base API endpoint for environment"""
+        import os
+        env_url = os.getenv('NINEPAY_ENDPOINT')
+        if env_url:
+            return env_url.rstrip('/')
+        return cls.BASE_URLS.get(env, cls.BASE_URLS[cls.SANDBOX])

@@ -10,7 +10,14 @@ __author__ = "9Pay Labs"
 
 from ninepay.config import NinePayConfig
 from ninepay.gateway import NinePayGateway
-from ninepay.request import CreatePaymentRequest
+from ninepay.request import (
+    CreatePaymentRequest,
+    CreateRefundRequest,
+    PayerAuthRequest,
+    AuthorizeCardPaymentRequest,
+    ReverseCardPaymentRequest,
+    CapturePaymentRequest
+)
 from ninepay.response import BasicResponse
 from ninepay.enums import PaymentMethod, Currency, Language, TransactionType, Environment
 from ninepay.exceptions import PaymentException, ValidationException
@@ -19,6 +26,11 @@ __all__ = [
     "NinePayConfig",
     "NinePayGateway",
     "CreatePaymentRequest",
+    "CreateRefundRequest",
+    "PayerAuthRequest",
+    "AuthorizeCardPaymentRequest",
+    "ReverseCardPaymentRequest",
+    "CapturePaymentRequest",
     "BasicResponse",
     "PaymentMethod",
     "Currency",
