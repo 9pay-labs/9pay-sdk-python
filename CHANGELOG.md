@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.2.0 (2026-03-16)
+
+### Features
+
+- Update pyproject.toml
+  ([`ed46c9a`](https://github.com/9pay-labs/9pay-sdk-python/commit/ed46c9aaa5e9114bc297fcfa554b4db6dbc1c9c0))
+
+
 ## v1.1.0 (2026-03-10)
 
 ### Features
