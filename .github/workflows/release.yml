@@ -38,7 +38,7 @@ jobs:
 
       - name: Release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           semantic-release version --push
