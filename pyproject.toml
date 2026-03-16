@@ -6,7 +6,7 @@ major_on_zero = false
 initial_version = "1.0.0" 
 
 [tool.semantic_release.branches.main]
-match = "main"
+match = "master"
 
 [tool.semantic_release.publish]
 upload_to_vcs_release = true
