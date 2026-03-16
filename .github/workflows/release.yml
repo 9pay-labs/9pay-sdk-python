@@ -36,6 +36,15 @@ jobs:
           git log --oneline -5
           git tag
 
+      - name: Configure git
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git config --global credential.helper store
+          echo "https://x-access-token:${{ secrets.GH_TOKEN }}@github.com" \
+            > ~/.git-credentials
+          chmod 600 ~/.git-credentials
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
