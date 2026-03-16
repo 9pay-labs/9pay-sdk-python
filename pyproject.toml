@@ -18,6 +18,7 @@ token = { env = "GH_TOKEN" }
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
+default_templates = { changelog_file = "CHANGELOG.md" }
 
 [tool.semantic_release.pypi]
 enabled = true
