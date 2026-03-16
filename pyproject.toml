@@ -17,7 +17,7 @@ type = "github"
 token = { env = "GH_TOKEN" }
 
 [tool.semantic_release.changelog]
-default_templates = { changelog_file = "CHANGELOG.md" }
+changelog_file = "CHANGELOG.md"
 
 [tool.semantic_release.pypi]
 enabled = true
