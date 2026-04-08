@@ -31,7 +31,7 @@ Official Python SDK for integrating 9PAY Payment Gateway.
    NINEPAY_SECRET_KEY=your_secret_key
    NINEPAY_CHECKSUM_KEY=your_checksum_key
    NINEPAY_ENV=SANDBOX
-   NINEPAY_ENDPOINT=https://xxx-payment.9pay.mobi
+   NINEPAY_ENDPOINT=9pay_endpoint
    ```
 
 3. **Usage:**
