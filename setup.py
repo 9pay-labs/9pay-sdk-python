@@ -16,11 +16,10 @@ setup(
     name="ninepay-sdk",
     version=get_version(),
     author="9Pay Labs",
-    author_email="app@9pay.vn",
+    author_email="apps@9pay.vn",
     description="Official Python SDK for 9PAY Payment Gateway",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/9pay-labs/9pay-sdk-python",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
